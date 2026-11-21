@@ -112,13 +112,13 @@ function unlockAudio(){
   }).catch(()=>{});
 }
 function playMusic(){
-  music.valume=0;
+  music.volume=0;
   music.play().catch(()=>{});
   let v =0;
   const fade=setInterval(()=>{
     v = Math.min(0.8,v+0.05);
-    music.valume=v;
-    if(v=0.8) clearInterval(fade);
+    music.volume=v;
+    if(v<=0.8) clearInterval(fade);
   },150);
 }
 function blowOut() {
@@ -129,7 +129,7 @@ function blowOut() {
   playMusic();
   hint.textContent = " طارت أمنيتكِ إلى السماء مع دخان الشمعة✨";
   startBtn.style.display = "none";
-  if (micStream) micStream.getTracks().forEach(t => t.stop());
+  if (micStream) setTimeout(() => micStream.getTracks().forEach(t => t.stop()), 1000);
   setTimeout(typeMessage, 1500);
 }
 
