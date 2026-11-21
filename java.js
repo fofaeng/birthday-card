@@ -103,12 +103,30 @@ const level = document.getElementById("level");
 const MESSAGE = "في يوم ميلادكِ، لا أتمنى لكِ لحظة واحدة، بل عمراً كاملاً من السعادة التي تشبه دهشة الليالي البيضاء، وهدوء ليالي المطر التي تحبينها. كل عام وأنتِ بخير  ";
 let blown = false;
 let micStream = null;
-
+const music=document.getElementById("music");
+function unlockAudio(){
+  music.volume=0;
+  music.play().then(()=>{
+    music.pause();
+    music.currentTime=0;
+  }).catch(()=>{});
+}
+function playMusic(){
+  music.valume=0;
+  music.play().catch(()=>{});
+  let v =0;
+  const fade=setInterval(()=>{
+    v = Math.min(0.8,v+0.05);
+    music.valume=v;
+    if(v=0.8) clearInterval(fade);
+  },150);
+}
 function blowOut() {
   if (blown) return;
   blown = true;
   scene.classList.add("out");
   title.classList.add("gone");
+  playMusic();
   hint.textContent = " طارت أمنيتكِ إلى السماء مع دخان الشمعة✨";
   startBtn.style.display = "none";
   if (micStream) micStream.getTracks().forEach(t => t.stop());
@@ -139,6 +157,7 @@ const THRESHOLD = 0.08;
 const FRAMES_NEEDED = 8;
 
 startBtn.onclick = async () => {
+  unlockAudio();
   try {
     micStream = await navigator.mediaDevices.getUserMedia({
       audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false }
