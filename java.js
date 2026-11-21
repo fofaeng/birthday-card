@@ -135,8 +135,8 @@ function typeMessage() {
 }
 
 /* ===== 3. المايك: كشف النفخ ===== */
-const THRESHOLD = 0.06;
-const FRAMES_NEEDED = 6;
+const THRESHOLD = 0.08;
+const FRAMES_NEEDED = 8;
 
 startBtn.onclick = async () => {
   try {
