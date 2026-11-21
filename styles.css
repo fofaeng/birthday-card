@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, #0a1030 0%, #1b1340 55%, #3a1f5c 100%);
-  font-family: "Noto Naskh Arabic", "Segoe UI", Tahoma, sans-serif;
+  font-family: "Amiri", "Segoe UI", Tahoma, sans-serif;
   color: #fff3d6;
   overflow-x: hidden;
 }
