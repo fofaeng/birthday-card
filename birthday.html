@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>To my gorgeous sister..</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=DecoType+Naskh+Special:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="sky"></canvas>
+    <div class="frame">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+
+        <h1 id="title" dir="ltr">Happy Birthday <br><span>Ashjan</span></h1>
+        <div id="message" class="glass hidden">
+            <p id="text"></p>
+        </div>
+        <svg id="scene" viewBox="0 0 600 340" role="img" aria-label="طاولة عليها كيكة وشمعة وكتب وقطة وقهوة">
+            <defs>
+             <radialGradient id="glow"><stop offset="0" stop-color="#ffc35a" stop-opacity=".6"/><stop offset="1" stop-color="#ffc35a" stop-opacity="0"/></radialGradient>
+             <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2a4a"/><stop offset="1" stop-color="#150f22"/></linearGradient>
+             <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffd25a"/></linearGradient>
+      </defs>
+<!-- الطاولة والتموجات -->
+      <rect x="0" y="270" width="600" height="70" fill="url(#wood)"/>
+      <line x1="0" y1="270" x2="600" y2="270" stroke="rgba(255,220,160,.35)" stroke-width="2"/>
+      <ellipse class="ripple" cx="110" cy="305" rx="30" ry="6"/>
+      <ellipse class="ripple" style="animation-delay:-1s" cx="300" cy="315" rx="36" ry="7"/>
+      <ellipse class="ripple" style="animation-delay:-2s" cx="470" cy="300" rx="28" ry="5"/>
+      <ellipse class="ripple" style="animation-delay:-.5s" cx="555" cy="322" rx="24" ry="5"/>
+      <!-- الكتب -->
+      <rect x="55" y="250" width="140" height="20" rx="2" fill="#3b2a6b"/>
+      <rect x="62" y="228" width="126" height="22" rx="2" fill="#7a3b4a"/>
+      <rect x="58" y="208" width="134" height="20" rx="2" fill="#2f5d62"/>
+      <g font-size="9" fill="#ffd78c" text-anchor="middle" font-family="Georgia,serif">
+        <text x="125" y="264">Before we say goodbye</text>
+        <text x="125" y="243">Before your memory fades</text>
+        <text x="125" y="222">Before the coffee gets cold</text>
+      </g>
+      <!-- القطة -->
+      <g class="cat">
+        <path d="M172 198 q24 -2 18 -24" stroke="#0d0b14" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <ellipse cx="128" cy="196" rx="46" ry="13" fill="#0d0b14" stroke="rgba(180,160,255,.35)"/>
+        <circle cx="84" cy="195" r="15" fill="#0d0b14" stroke="rgba(180,160,255,.35)"/>
+        <polygon points="70,188 72,170 85,181" fill="#0d0b14"/>
+        <polygon points="83,181 96,170 98,188" fill="#0d0b14"/>
+        <path d="M73 195 q3.5 4 7 0 M88 195 q3.5 4 7 0" stroke="#cdb8ff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="84" cy="200" r="1.5" fill="#e8a0b8"/>
+      </g>
+       <text class="z" x="62" y="176">z</text>
+      <text class="z" style="animation-delay:1.5s" x="54" y="164">z</text>
+      <!-- الشيزكيك والبيريز -->
+      <ellipse cx="300" cy="274" rx="108" ry="11" fill="#cfd6e6" opacity=".85"/>
+      <ellipse cx="300" cy="271" rx="78" ry="12" fill="#7a4a2e"/>
+      <rect x="222" y="250" width="156" height="21" fill="#7a4a2e"/>
+      <rect x="222" y="215" width="156" height="36" fill="#fbe9c6"/>
+      <ellipse cx="300" cy="215" rx="78" ry="14" fill="#fff3d6"/>
+      <ellipse cx="300" cy="216" rx="58" ry="9" fill="#e4748f" opacity=".55"/>
+      <circle cx="270" cy="213" r="5" fill="#c2185b"/>
+      <circle cx="330" cy="214" r="5" fill="#c2185b"/>
+      <circle cx="300" cy="222" r="5" fill="#c2185b"/>
+      <circle cx="285" cy="210" r="3.5" fill="#3b4fb8"/>
+      <circle cx="315" cy="219" r="3.5" fill="#3b4fb8"/>
+      <circle cx="258" cy="217" r="3" fill="#8e1b4a"/>
+      <circle cx="342" cy="217" r="3" fill="#8e1b4a"/>
+ <!-- الشمعة -->
+      <g id="candle">
+        <rect x="270" y="90" width="60" height="130" fill="transparent"/>
+        <circle class="glow" cx="300" cy="150" r="40" fill="url(#glow)"/>
+        <rect x="294" y="170" width="12" height="46" rx="3" fill="#fdf2f8"/>
+        <line x1="300" y1="170" x2="300" y2="164" stroke="#222" stroke-width="2"/>
+        <g class="flame">
+          <path d="M300 128 C313 142 311 160 300 166 C289 160 287 142 300 128Z" fill="url(#fl)"/>
+          <path d="M300 144 C305 151 304 159 300 163 C296 159 295 151 300 144Z" fill="#fff3b0"/>
+        </g>
+        <path class="flame-wisp" d="M300 124 q-7 -10 0 -20 q7 -10 0 -20"/>
+        <path class="smoke" d="M300 150 q-8 -12 0 -24 q8 -12 0 -24"/>
+        <path class="smoke s2" d="M300 150 q8 -12 0 -24 q-8 -12 0 -24"/>
+      </g>
+       <!-- إبريق القهوة -->
+      <path d="M424 190 L446 190 L452 214 L418 214 Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.45)"/>
+      <path d="M418 214 L452 214 L460 270 L410 270 Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.45)"/>
+      <path d="M415 236 L455 236 L460 269 L410 269 Z" fill="#150a07"/>
+      <ellipse cx="435" cy="236" rx="20" ry="3" fill="rgba(255,190,110,.55)"/>
+      <rect x="421" y="184" width="28" height="6" rx="3" fill="#2a2036"/>
+      <path d="M456 224 q22 6 3 34" stroke="rgba(255,255,255,.45)" stroke-width="3" fill="none"/>
+      <path d="M425 245 v18" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- الفنجان -->
+       <ellipse cx="518" cy="272" rx="38" ry="5" fill="#cfd6e6" opacity=".8"/>
+      <path d="M488 238 L548 238 L542 270 L494 270 Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.5)"/>
+      <path d="M490 247 L546 247 L542 269 L494 269 Z" fill="#150a07"/>
+      <ellipse cx="518" cy="247" rx="27" ry="3.5" fill="rgba(255,190,110,.55)"/>
+      <path d="M547 244 q20 4 -4 22" stroke="rgba(255,255,255,.5)" stroke-width="3" fill="none"/>
+      <path class="steam" d="M510 232 q-6 -8 0 -16 q6 -8 0 -16"/>
+      <path class="steam" style="animation-delay:1.5s" d="M526 232 q6 -8 0 -16 q-6 -8 0 -16"/>
+    </svg>
+    <p id="hint">تمني امنيه وانفخي على الشمعة 🕯️</p>
+    <div id="meter"><i id="level"></i></div>
+    <button id="start"> انفخي لتضيء امنيتك..</button>
+  </div>
+
+  <button id="full" aria-label="ملء الشاشة">⛶</button>
+<script src="java.js"></script>
+
+    
+</body>
+</html>
